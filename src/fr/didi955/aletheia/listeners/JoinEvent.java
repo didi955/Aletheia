@@ -13,12 +13,13 @@ public class JoinEvent {
     public static void onJoin(GuildMemberJoinEvent event){
         EmbedBuilder builder = new EmbedBuilder();
         User user = event.getUser();
-        builder.setAuthor(user.getName(), null, user.getAvatarUrl()+"?size=256");
-        builder.setTitle("Bienvenue " + user.getAsMention() + " !");
-        builder.setDescription("sur le discord de Rushcubeland\n Fais !help pour plus d'informations");
-        builder.setColor(Color.ORANGE);
+        builder.setAuthor(user.getName(), null, user.getAvatarUrl());
+        builder.setTitle("Bienvenue sur le discord de Rushcubeland");
+        builder.addBlankField(true);
+        builder.setDescription("Faites !help pour plus d'informations");
+        builder.setColor(Color.GREEN);
         MessageChannel channel = event.getGuild().getTextChannelById(Aletheia.CONFIGURATION.getString("channelJoinID", "id"));
-        if(channel !=null){
+        if(channel != null){
             channel.sendMessage(builder.build()).queue();
         }
 
