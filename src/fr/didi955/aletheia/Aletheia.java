@@ -1,7 +1,7 @@
 package fr.didi955.aletheia;
 
 import fr.didi955.aletheia.jda.JDAManager;
-import fr.didi955.aletheia.listeners.MessageListener;
+import fr.didi955.aletheia.listeners.Listener;
 import fr.didi955.aletheia.utils.Configuration;
 
 import java.io.IOException;
@@ -36,7 +36,7 @@ public class Aletheia {
             return;
         }
 
-        JDAManager.getShardManager().addEventListener(new MessageListener());
+        JDAManager.getShardManager().addEventListener(new Listener());
 
     }
 }
