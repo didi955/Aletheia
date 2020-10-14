@@ -27,7 +27,8 @@ public class JDAManager {
                 GatewayIntent.GUILD_BANS,
                 GatewayIntent.GUILD_MESSAGES,
                 GatewayIntent.DIRECT_MESSAGE_TYPING,
-                GatewayIntent.GUILD_MEMBERS
+                GatewayIntent.GUILD_MEMBERS,
+                GatewayIntent.GUILD_VOICE_STATES
         );
         try {
 

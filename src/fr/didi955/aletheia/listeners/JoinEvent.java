@@ -1,6 +1,7 @@
 package fr.didi955.aletheia.listeners;
 
 import fr.didi955.aletheia.Aletheia;
+import fr.didi955.aletheia.commands.CommandMap;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.entities.User;
@@ -10,7 +11,13 @@ import java.awt.*;
 
 public class JoinEvent {
 
-    public static void onJoin(GuildMemberJoinEvent event){
+    private CommandMap commandMap;
+
+    public JoinEvent(CommandMap commandMap) {
+        this.commandMap = commandMap;
+    }
+
+    public void onJoin(GuildMemberJoinEvent event){
         EmbedBuilder builder = new EmbedBuilder();
         User user = event.getUser();
         builder.setAuthor(user.getName(), null, user.getAvatarUrl());
