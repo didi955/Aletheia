@@ -2,5 +2,6 @@
   "token":"",
   "shardTotal":1,
 
-  "channelJoinID": "id"
+  "channelJoinID": "id",
+  "channelCommandsID": "id"
 }
