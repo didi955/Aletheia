@@ -3,5 +3,6 @@
   "shardTotal":1,
 
   "channelJoinID": "id",
-  "channelCommandsID": "id"
+  "channelCommandsID": "id",
+  "channelReglementID": "id"
 }

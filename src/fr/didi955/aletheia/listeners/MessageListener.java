@@ -14,6 +14,10 @@ public class MessageListener {
     }
 
     public void onMessage(MessageReceivedEvent event){
+        if(event.getTextChannel().getId().equals(Aletheia.CONFIGURATION.getString("channelReglementID", "id"))){
+            event.getTextChannel().addReactionById(event.getMessageId(), "✅").queue();
+            return;
+        }
         if(event.getAuthor().equals(event.getJDA().getSelfUser())) {
             return;
         }
@@ -26,9 +30,6 @@ public class MessageListener {
                     event.getMessage().delete().queue();
                 }
             }
-
-
         }
-
     }
 }

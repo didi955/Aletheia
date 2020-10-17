@@ -55,6 +55,34 @@ public class Configuration {
         return 1;
     }
 
+    public void setInt(String key, int value){
+
+        try {
+
+            if(object.has(key))
+                object.put(key, value);
+
+        }
+        catch (JSONException e){
+            e.printStackTrace();
+        }
+
+    }
+
+    public void setString(String key, String value){
+
+        try {
+
+            if(object.has(key))
+                object.put(key, value);
+
+        }
+        catch (JSONException e){
+            e.printStackTrace();
+        }
+
+    }
+
     public void save(){
 
         try (JSONWriter writer = new JSONWriter(file)) {

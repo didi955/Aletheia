@@ -11,13 +11,7 @@ import java.awt.*;
 
 public class JoinEvent {
 
-    private CommandMap commandMap;
-
-    public JoinEvent(CommandMap commandMap) {
-        this.commandMap = commandMap;
-    }
-
-    public void onJoin(GuildMemberJoinEvent event){
+    public static void onJoin(GuildMemberJoinEvent event){
         EmbedBuilder builder = new EmbedBuilder();
         User user = event.getUser();
         builder.setAuthor(user.getName(), null, user.getAvatarUrl());
