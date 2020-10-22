@@ -1,5 +1,8 @@
 {
 
-  "messageReglement": "Voici le reglement de notre serveur"
+  "messageReglement": "Voici le reglement de notre serveur",
+
+  "titleWelcome": "Bienvenue !",
+  "messageWelcome": "Veuillez acceuillir %user% sur le discord ! \nFaites !help pour plus d'informations"
 
 }

@@ -12,7 +12,7 @@ public class Reglement {
 
         TextChannel channel = JDAManager.getShardManager().getTextChannelById(Aletheia.CONFIGURATION.getString("channelReglementID", "id"));
 
-        if (channel != null) {
+        if(channel != null) {
             MessageHistory history = channel.getHistory();
             if(history.isEmpty()){
                 channel.sendMessage(Aletheia.MESSAGE_RESSOURCES.getString("messageReglement", "Voici le reglement de notre serveur")).queue();

@@ -14,10 +14,8 @@ public class JoinEvent {
     public static void onJoin(GuildMemberJoinEvent event){
         EmbedBuilder builder = new EmbedBuilder();
         User user = event.getUser();
-        builder.setAuthor(user.getName(), null, user.getAvatarUrl());
-        builder.setTitle("Bienvenue sur le discord de Rushcubeland");
-        builder.addBlankField(true);
-        builder.setDescription("Faites !help pour plus d'informations");
+        builder.setTitle(Aletheia.MESSAGE_RESSOURCES.getString("titleWelcome", "Bienvenue !"));
+        builder.setDescription(Aletheia.MESSAGE_RESSOURCES.getString("messageWelcome", "message").replace("%user%", user.getAsMention()));
         builder.setColor(Color.GREEN);
         MessageChannel channel = event.getGuild().getTextChannelById(Aletheia.CONFIGURATION.getString("channelJoinID", "id"));
         if(channel != null){
